@@ -1,7 +1,7 @@
 <div align="center">
   
   <a href="https://github.com/chandu1234678">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=28&pause=1000&color=3B82F6&center=true&vCenter=true&width=600&lines=Hi%2C+I'm+Bharat+Chandra+👋;Computer+Science+Student;Full-Stack+ML+Developer;Competitive+Programmer" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=28&pause=1000&color=3B82F6&center=true&vCenter=true&width=600&lines=Hi%2C+I'm+Bharat+Chandra+👋;Computer+Science+Student;Full-Stack+ML+Developer;Full-stack+Web+developer" alt="Typing SVG" />
   </a>
 
   <p align="center">
