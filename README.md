@@ -1,77 +1,64 @@
-<div align="center">
-  
-  <a href="https://github.com/chandu1234678">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=28&pause=1000&color=3B82F6&center=true&vCenter=true&width=600&lines=Hi%2C+I'm+Bharat+Chandra+👋;Computer+Science+Student;Full-Stack+ML+Developer;Full-stack+Web+developer" alt="Typing SVG" />
-  </a>
+# Hi, I'm Bharat Chandra
 
-  <p align="center">
-    I enjoy turning ideas into working applications by designing APIs, integrating models, and improving system structure step by step. My primary focus is building practical software systems that bridge the gap between <b>machine learning</b> and <b>robust backend development</b>.
-  </p>
+Computer Science student interested in building practical software systems that combine **machine learning and backend development**.
 
-</div>
+I enjoy turning ideas into working applications by designing APIs, integrating models, and improving system structure step by step.
 
 ---
 
-## 🛠️ Tech Stack & Tools
+## 🛠️ Technical Arsenal
 
-<div align="center">
-  <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python" />
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
-  <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" alt="React" />
-  <img src="https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi" alt="FastAPI" />
-  <img src="https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white" alt="PyTorch" />
-  <img src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
-  <img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
-</div>
-
+* **Languages:** Python, JavaScript, SQL
+* **Backend & APIs:** FastAPI, RESTful Architecture, JWT Authentication, Asynchronous I/O
+* **Machine Learning:** PyTorch, Scikit-Learn, NLP (TF-IDF), Computer Vision (CNNs), Model Interpretability (Grad-CAM, SHAP)
+* **Frontend:** React, Chrome Extension Development
+* **Infrastructure & Data:** PostgreSQL, Docker, Git/GitHub, ORM Mapping
 ---
 
 ## 🚀 Featured Projects
 
-### 🏥 [Hospital Management Platform](https://github.com/chandu1234678/hospital-management-platform)
-A comprehensive full-stack solution designed to streamline hospital operations.
-* **Stack:** React, FastAPI, PostgreSQL
-* **Features:** Distinct, role-based portals for Admin, Doctors, and Reception, paired with a seamless public-facing site.
+### 🏥 Hospital Management Platform
+A comprehensive full-stack solution designed to handle complex hospital workflows and data isolation.
+* **Architecture:** Decoupled React frontend and FastAPI backend communicating via RESTful endpoints.
+* **Backend & DB:** Designed relational schemas in PostgreSQL with an ORM layer for efficient querying of patient records and appointment schedules.
+* **Security:** Implemented strictly partitioned Role-Based Access Control (RBAC) ensuring Admin, Doctors, and Receptionists only access authorized data boundaries.
+* 🔗 [Repository](https://github.com/chandu1234678/hospital-management-platform)
 
-### 🔬 [Diabetic Ulcer Detection AI](https://github.com/chandu1234678/diabetic-ulcer-ai-system)
-A clinical decision support system combining medical image analysis with explainable AI.
-* **Stack:** PyTorch, FastAPI, Grad-CAM, SHAP
-* **Features:** CNN-based image classification with visual interpretability and feature importance for clinical data.
+### 🔬 Explainable AI System for Diabetic Ulcer Detection
+A clinical decision support API bringing transparency to black-box computer vision models.
+* **Modeling:** Trained custom CNN architectures in PyTorch for high-accuracy medical image classification.
+* **Explainability (XAI):** Integrated Grad-CAM to generate visual heatmaps of model attention, alongside SHAP analysis to quantify the impact of tabular clinical features.
+* **Deployment:** Wrapped the inference engine in a FastAPI application, optimizing payload handling for image tensors and minimizing latency for real-time diagnostic support.
+* 🔗 [Repository](https://github.com/chandu1234678/diabetic-ulcer-ai-system)
 
-### 📰 [Fake News Analyzer](https://github.com/chandu1234678/fake-news-analyzer)
-A tool that analyzes selected news content and provides real-time credibility scoring.
-* **Stack:** Logistic Regression, TF-IDF, FastAPI, Chrome Extensions
-* **Features:** Confidence scoring pipeline integrated with contextual reasoning outputs.
+### 📰 Fake News Analyzer
+A distributed application combining a browser-based client with an NLP-powered analysis server.
+* **NLP Pipeline:** Engineered a text processing pipeline using TF-IDF vectorization and Logistic Regression, trained on a balanced dataset of 10k+ samples.
+* **Client-Server Integration:** Built a Chrome extension that extracts DOM content and securely transmits it to the backend via configured CORS endpoints.
+* **Real-time Scoring:** Designed the FastAPI backend to deserialize the ML model into memory on startup for sub-second credibility scoring and contextual reasoning delivery.
+* 🔗 [Extension](https://github.com/chandu1234678/fake-news-analyzer) | 🔗 [Backend](https://github.com/chandu1234678/fake-news-backend)
 
-### 🛒 [Vijetha Digital](https://github.com/chandu1234678/vijetha-digital-backend)
-A backend-driven full-stack e-commerce system developed for a printing shop.
-* **Stack:** REST APIs, JWT, Role-based Access Control
-* **Features:** Secure payment flows, order lifecycle tracking, and admin management.
+### 🛒 Vijetha Digital
+A robust e-commerce backend engine tailored for custom order lifecycles in the printing industry.
+* **API Design:** Structured scalable REST APIs to handle dynamic product configurations and multi-step checkout processes.
+* **Authentication:** Engineered secure session management using stateless JWTs and bcrypt password hashing.
+* **Data Integrity:** Implemented ACID-compliant transaction blocks for inventory and order state machines.
+* 🔗 [Repository](https://github.com/chandu1234678/vijetha-digital-backend)
 
-### 📈 [Crypto Trading System](https://github.com/chandu1234678/crypto-trade-professional)
-A backend system integrating exchange APIs to simulate algorithmic trading strategies.
-* **Stack:** Python, Exchange APIs
-* **Features:** Live market data retrieval, strategy-based execution, and secure key configuration.
-
+### 📈 Crypto Trading System
+A data-driven backend service for executing algorithmic trading logic against live exchange data.
+* **Integration:** Leveraged third-party exchange APIs for real-time market data ingestion and trade execution.
+* **System Design:** Built a modular backend prioritizing low-latency data parsing and secure environmental configuration for API keys.
+* 🔗 [Repository](https://github.com/chandu1234678/crypto-trade-professional)
 ---
 
-## 📊 GitHub Stats
+## 🌱 Currently Learning
 
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=chandu1234678&show_icons=true&theme=tokyonight" width="48%" alt="Bharat's GitHub Stats" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=chandu1234678&theme=tokyonight" width="48%" alt="Bharat's GitHub Streak" />
-</div>
+I am currently improving my understanding of:
 
----
+- Machine learning system deployment (MLOps and model serving)
+- Advanced backend architecture and scalable API design
+- Distributed systems and database query optimization
+- Emerging explainable AI (XAI) techniques
 
-## 🌱 What's Next?
-
-Alongside honing my problem-solving skills through **competitive programming**, I am currently focusing on:
-- 🚀 **MLOps:** Machine learning system deployment and monitoring.
-- 🏗️ **Architecture:** Advanced backend design and scalable application development.
-- 🧠 **XAI:** Emerging explainable AI techniques for real-world trust.
-
-<br>
-<div align="center">
-  <i>"Building practical systems that combine ML models with real applications."</i>
-</div>
+My goal is to continue building **practical systems that combine ML models with real applications.**
