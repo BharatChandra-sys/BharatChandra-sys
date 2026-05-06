@@ -1,4 +1,4 @@
-# Bharat Chandra
+#Hi,I'm Bharat Chandra
 
 CSE student at GITAM University (2027). I build systems that work in real environments — not demos, not notebooks, not university assignments.
 
