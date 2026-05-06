@@ -21,7 +21,7 @@ The common thread across everything I build: connecting an intelligence layer to
 
 ## Projects
 
-### 🚀 CAN-7USAT Ground Control Station
+### CAN-7USAT Ground Control Station
 `Python · FastAPI · WebSocket · Kalman Filter · PostgreSQL · React · TypeScript` — **2026**
 
 Real-time ground control station for the **IN-SPACe Model Rocketry Competition 2026**, built for GITAM University's CAN-7USAT team targeting 1000 m AGL.
@@ -44,7 +44,7 @@ The backend decodes 46-byte binary telemetry packets from a Teensy 4.1 flight co
 
 ---
 
-### 🤖 AUVBrain — Autonomous Underwater Vehicle Control System
+### AUVBrain — Autonomous Underwater Vehicle Control System
 `Python · FastAPI · ROS2 · Docker · asyncio` — **2026**
 
 Full autonomous control stack for an underwater vehicle. No internet, no margin for error. Every component had to work offline and degrade gracefully.
@@ -62,7 +62,7 @@ The system runs a deterministic `observe → decide → act` agent loop with 4-D
 
 ---
 
-### 🔬 MedVision AI — Explainable AI System for Diabetic Ulcer Detection
+### MedVision AI — Explainable AI System for Diabetic Ulcer Detection
 `PyTorch · FastAPI · Grad-CAM · SHAP · Docker · MLflow · DVC · Prometheus · Grafana` — **2025–2026**
 
 Started at the **AI Day Hackathon (GITAM × Kodryx AI, March 2026)**. Extended into a production-deployed clinical decision-support platform.
@@ -84,7 +84,7 @@ The system combines medical image analysis and structured clinical data (age, BM
 
 ---
 
-### 📰 Fake News Analyzer
+### Fake News Analyzer
 `FastAPI · Chrome Extension · TF-IDF · Logistic Regression · LLM reasoning` — **2025–2026**
 
 Started at **HackXplore (IEEE-SSIT Student Chapter, VJIT, April 2026)**. A browser extension that scores news content for credibility as you browse — one click, instant result.
@@ -100,7 +100,7 @@ Started at **HackXplore (IEEE-SSIT Student Chapter, VJIT, April 2026)**. A brows
 
 ---
 
-### 🏥 Hospital Management Platform
+### Hospital Management Platform
 `FastAPI · PostgreSQL · SQLAlchemy · React · JWT · RBAC` — **2025**
 
 Full-stack platform for real hospital workflows. The goal was to model the domain correctly, not just build CRUD endpoints.
@@ -116,7 +116,7 @@ Full-stack platform for real hospital workflows. The goal was to model the domai
 
 ---
 
-### 🛒 Vijetha Digital — E-Commerce Backend
+### Vijetha Digital — E-Commerce Backend
 `FastAPI · PostgreSQL · JWT · Razorpay` — **2024–Present** · *Production, live*
 
 Backend for a real printing business. Not a demo. In use.
