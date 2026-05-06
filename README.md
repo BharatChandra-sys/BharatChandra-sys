@@ -1,64 +1,133 @@
-# Hi, I'm Bharat Chandra
+# Bharat Chandra
 
-Computer Science student interested in building practical software systems that combine **machine learning and backend development**.
+CSE student at GITAM University, Hyderabad. I build backend systems and ML-powered applications — the kind that run in real environments, not just in notebooks.
 
-I enjoy turning ideas into working applications by designing APIs, integrating models, and improving system structure step by step.
+My focus is on the gap between a trained model and a working product. That means APIs, inference pipelines, telemetry systems, and production architecture. I learn by shipping things.
+
+📬 bc833498@gmail.com · [LinkedIn](https://linkedin.com/in/bodapati-bharat-chandra-4b1b58290) · [GitHub](https://github.com/chandu1234678)
 
 ---
 
-## 🛠️ Technical Arsenal
+## What I Work With
 
-* **Languages:** Python, JavaScript, SQL
-* **Backend & APIs:** FastAPI, RESTful Architecture, JWT Authentication, Asynchronous I/O
-* **Machine Learning:** PyTorch, Scikit-Learn, NLP (TF-IDF), Computer Vision (CNNs), Model Interpretability (Grad-CAM, SHAP)
-* **Frontend:** React, Chrome Extension Development
-* **Infrastructure & Data:** PostgreSQL, Docker, Git/GitHub, ORM Mapping
+**Languages** — Python, JavaScript, SQL, Java, C  
+**Backend** — FastAPI, REST API design, JWT auth, async I/O, WebSockets  
+**ML / AI** — PyTorch, Scikit-Learn, TF-IDF, CNNs, Grad-CAM, SHAP, MLflow  
+**Autonomous Systems** — ROS2, Kalman filtering, real-time telemetry, sensor fusion  
+**Frontend** — React, Chrome Extension APIs  
+**Infrastructure** — PostgreSQL, MongoDB, Docker, Git
+
 ---
 
-## 🚀 Featured Projects
+## Projects
 
-### 🏥 Hospital Management Platform
-A comprehensive full-stack solution designed to handle complex hospital workflows and data isolation.
-* **Architecture:** Decoupled React frontend and FastAPI backend communicating via RESTful endpoints.
-* **Backend & DB:** Designed relational schemas in PostgreSQL with an ORM layer for efficient querying of patient records and appointment schedules.
-* **Security:** Implemented strictly partitioned Role-Based Access Control (RBAC) ensuring Admin, Doctors, and Receptionists only access authorized data boundaries.
-* 🔗 [Repository](https://github.com/chandu1234678/hospital-management-platform)
+### 🚀 CAN-7USAT Ground Control Station
+`Python · FastAPI · WebSocket · Kalman Filter · PostgreSQL · React` · **2026**
+
+Built for the **IN-SPACe Model Rocketry Competition 2026**. A real-time telemetry backend that decodes 46-byte binary flight packets from a Teensy 4.1 flight computer transmitted over a 900 MHz XBee radio link.
+
+- End-to-end latency under 5 ms, 0% packet loss across all 23 test runs
+- Kalman filter fusing barometer and accelerometer readings for clean altitude estimation
+- 6-state flight state machine: `PRE-FLIGHT → BOOST → COAST → APOGEE → DESCENT → LANDED`
+- Live 10 Hz WebSocket broadcast to a React dashboard
+
+> This one had real stakes — actual rocket, actual competition. The backend had to work on launch day with no room to debug mid-flight.
+
+[→ Repository](https://github.com/chandu1234678/CAN-7USAT-Ground-Control-Backend)
+
+---
+
+### 🤖 AUVBrain — Autonomous Underwater Vehicle Control System
+`Python · FastAPI · ROS2 · Docker · asyncio` · **2026**
+
+Autonomous control stack for an underwater vehicle. Implements a deterministic `observe → decide → act` agent loop with 4-DOF thruster control.
+
+- Safety monitor enforcing hard limits on depth, battery, temperature, and obstacle proximity
+- Offline LLM decision engine (llama.cpp / OpenAI-compatible) with rules-based fallback when LLM is unavailable
+- Agent loop p95 response time ≈ 0.84 ms
+- Append-only JSONL telemetry logging for full mission replay
+
+> The constraint was no internet on the vehicle. Everything had to run offline and fail gracefully. That shaped every design decision.
+
+[→ Repository](https://github.com/chandu1234678/AUVBrain)
+
+---
 
 ### 🔬 Explainable AI System for Diabetic Ulcer Detection
-A clinical decision support API bringing transparency to black-box computer vision models.
-* **Modeling:** Trained custom CNN architectures in PyTorch for high-accuracy medical image classification.
-* **Explainability (XAI):** Integrated Grad-CAM to generate visual heatmaps of model attention, alongside SHAP analysis to quantify the impact of tabular clinical features.
-* **Deployment:** Wrapped the inference engine in a FastAPI application, optimizing payload handling for image tensors and minimizing latency for real-time diagnostic support.
-* 🔗 [Repository](https://github.com/chandu1234678/diabetic-ulcer-ai-system)
+`PyTorch · FastAPI · Grad-CAM · SHAP · Docker · MLflow` · **2025–2026**
 
-### 📰 Fake News Analyzer
-A distributed application combining a browser-based client with an NLP-powered analysis server.
-* **NLP Pipeline:** Engineered a text processing pipeline using TF-IDF vectorization and Logistic Regression, trained on a balanced dataset of 10k+ samples.
-* **Client-Server Integration:** Built a Chrome extension that extracts DOM content and securely transmits it to the backend via configured CORS endpoints.
-* **Real-time Scoring:** Designed the FastAPI backend to deserialize the ML model into memory on startup for sub-second credibility scoring and contextual reasoning delivery.
-* 🔗 [Extension](https://github.com/chandu1234678/fake-news-analyzer) | 🔗 [Backend](https://github.com/chandu1234678/fake-news-backend)
+Started at the **AI Day Hackathon (GITAM, March 2026)**, then extended into a production-grade clinical decision-support API.
 
-### 🛒 Vijetha Digital
-A robust e-commerce backend engine tailored for custom order lifecycles in the printing industry.
-* **API Design:** Structured scalable REST APIs to handle dynamic product configurations and multi-step checkout processes.
-* **Authentication:** Engineered secure session management using stateless JWTs and bcrypt password hashing.
-* **Data Integrity:** Implemented ACID-compliant transaction blocks for inventory and order state machines.
-* 🔗 [Repository](https://github.com/chandu1234678/vijetha-digital-backend)
+- Custom CNN trained in PyTorch for medical image classification
+- Grad-CAM heatmaps show which image regions the model uses; SHAP values explain tabular feature impact
+- FastAPI inference backend containerised with Docker, MLflow experiment tracking, JWT auth, RBAC, and 5 health-check endpoints
 
-### 📈 Crypto Trading System
-A data-driven backend service for executing algorithmic trading logic against live exchange data.
-* **Integration:** Leveraged third-party exchange APIs for real-time market data ingestion and trade execution.
-* **System Design:** Built a modular backend prioritizing low-latency data parsing and secure environmental configuration for API keys.
-* 🔗 [Repository](https://github.com/chandu1234678/crypto-trade-professional)
+> The point wasn't accuracy alone — it was making the model's reasoning visible to clinicians who need to trust and challenge it.
+
+[→ Repository](https://github.com/chandu1234678/diabetic-ulcer-ai-system)
+
 ---
 
-## 🌱 Currently Learning
+### 📰 Fake News Analyzer
+`FastAPI · Chrome Extension · TF-IDF · Logistic Regression · LLM` · **2025–2026**
 
-I am currently improving my understanding of:
+Started at **HackXplore (IEEE-SSIT, VJIT, April 2026)**. A Chrome extension that scores news content for credibility as you browse.
 
-- Machine learning system deployment (MLOps and model serving)
-- Advanced backend architecture and scalable API design
-- Distributed systems and database query optimization
-- Emerging explainable AI (XAI) techniques
+- Logistic Regression on 10,000+ labeled samples, 90% validation accuracy with TF-IDF vectorization
+- Model loaded into memory at startup — sub-second scoring
+- FastAPI backend with an LLM reasoning layer for contextual verdict generation beyond the raw score
 
-My goal is to continue building **practical systems that combine ML models with real applications.**
+> The challenge was making the whole pipeline invisible. You highlight text, click once, get an answer. That UX constraint drove the backend design.
+
+[→ Extension](https://github.com/chandu1234678/fake-news-analyzer) · [→ Backend](https://github.com/chandu1234678/fake-news-backend)
+
+---
+
+### 🏥 Hospital Management Platform
+`FastAPI · PostgreSQL · SQLAlchemy · React · JWT · RBAC` · **2025**
+
+Full-stack system for real hospital workflows — not a demo app.
+
+- Relational PostgreSQL schema with ORM mapping for patient records, appointments, and inventory
+- Strict RBAC across Admin, Doctor, and Receptionist roles with ACID-compliant transaction blocks
+- Decoupled React frontend and FastAPI backend with clean API boundaries
+
+> The interesting problem here was domain modeling — figuring out how hospital data actually relates and then making the system enforce those rules at the database level.
+
+[→ Repository](https://github.com/chandu1234678/hospital-management-platform)
+
+---
+
+### 🛒 Vijetha Digital — E-Commerce Backend
+`FastAPI · PostgreSQL · JWT · Razorpay` · **2024–Present**
+
+Production backend for a real printing business. Live, in use.
+
+- 15+ REST endpoints with JWT auth, bcrypt hashing, and multi-role access (User / Admin / Business)
+- Razorpay payment integration
+- 6-state order lifecycle across 10 relational tables with ACID-compliant transaction handling
+
+[→ Repository](https://github.com/chandu1234678/vijetha-digital-backend)
+
+---
+
+## Experience
+
+**AI Intern — SmartED Innovations** · Feb 2026 – Present  
+ML workflows in Python/Scikit-Learn, FastAPI integrations for model inference pipelines
+
+**AI/ML Intern — Elevate Labs** · Apr 2026 – May 2026  
+Applied ML tasks: preprocessing, model training, evaluation, deployment-oriented backend work
+
+---
+
+## Currently Working On
+
+- MLOps: model serving, versioning, and monitoring in production
+- Advanced backend architecture and database query optimization
+- Distributed systems fundamentals
+- Deeper XAI techniques for high-stakes domains
+
+---
+
+*I prefer building over reading about building. Most of what I know came from running into a real problem and having to solve it.*
