@@ -1,6 +1,6 @@
 # Hi,I'm Bharat Chandra
 
-CSE student at GITAM University (2027). I build systems that work in real environments — not demos, not notebooks, not university assignments.
+CSE student at GITAM University. I build systems that work in real environments — not demos, not notebooks, not university assignments.
 
 The common thread across everything I build: connecting an intelligence layer to something physical or operational. Rocket telemetry. Underwater autonomy. Clinical AI. Production e-commerce. The code either works under real constraints, or it doesn't work.
 
