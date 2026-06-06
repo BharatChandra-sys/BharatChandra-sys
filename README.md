@@ -1,148 +1,127 @@
-# Hi,I'm Bharat Chandra
+<div align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=26&duration=3000&pause=1000&color=6E40C9&center=true&vCenter=true&width=600&lines=Bharat+Chandra;Backend+%26+AI+Systems+Engineer;Rocket+Telemetry.+Clinical+AI.+AUV+Control." alt="Typing SVG" />
+</div>
 
-CSE student at GITAM University. I build systems that work in real environments — not demos, not notebooks, not university assignments.
+<div align="center">
 
-The common thread across everything I build: connecting an intelligence layer to something physical or operational. Rocket telemetry. Underwater autonomy. Clinical AI. Production e-commerce. The code either works under real constraints, or it doesn't work.
+[![LinkedIn](https://img.shields.io/badge/-Bharat_Chandra-blue?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/bodapati-bharat-chandra-4b1b58290)
+[![Gmail](https://img.shields.io/badge/-bc833498@gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:bc833498@gmail.com)
+[![Live Demo](https://img.shields.io/badge/-MedVision_AI_Live-00C7B7?style=flat-square&logo=vercel&logoColor=white)](https://diabetic-ulcer-ai-system.vercel.app)
 
-📬 bc833498@gmail.com &nbsp;·&nbsp; [LinkedIn](https://linkedin.com/in/bodapati-bharat-chandra-4b1b58290) &nbsp;·&nbsp; [GitHub](https://github.com/chandu1234678)
+</div>
+
+---
+
+CSE @ GITAM University Hyderabad · Interning @ BHEL · Building systems that work under real constraints — not demos, not notebooks.
+
+The thread: an intelligence layer connected to something that has consequences. A rocket on a launch pad. An underwater vehicle at 20 m depth with no internet. A clinician who needs to understand and override an AI prediction.
 
 ---
 
 ## Stack
 
-**Languages** — Python, JavaScript, SQL, Java, C  
-**Backend** — FastAPI, REST API design, JWT auth, WebSockets, async I/O  
-**ML / AI** — PyTorch, Scikit-Learn, TF-IDF, CNNs, Grad-CAM, SHAP, MLflow, DVC  
-**Autonomous Systems** — ROS2, Kalman filtering, sensor fusion, real-time telemetry  
-**Frontend** — React, TypeScript, Vite, Chrome Extension APIs  
-**Infrastructure** — PostgreSQL, MongoDB, Docker, Prometheus, Grafana, Cloudinary
+<div align="center">
+
+![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/-FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
+![PyTorch](https://img.shields.io/badge/-PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
+![React](https://img.shields.io/badge/-React-61DAFB?style=flat-square&logo=react&logoColor=black)
+![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-336791?style=flat-square&logo=postgresql&logoColor=white)
+![Docker](https://img.shields.io/badge/-Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![WebSockets](https://img.shields.io/badge/-WebSockets-010101?style=flat-square&logo=socketdotio&logoColor=white)
+![ROS2](https://img.shields.io/badge/-ROS2-22314E?style=flat-square&logo=ros&logoColor=white)
+![MLflow](https://img.shields.io/badge/-MLflow-0194E2?style=flat-square&logo=mlflow&logoColor=white)
+
+</div>
 
 ---
 
 ## Projects
 
-### CAN-7USAT Ground Control Station
-`Python · FastAPI · WebSocket · Kalman Filter · PostgreSQL · React · TypeScript` — **2026**
+### CAN-7USAT — Real-Time Rocket Ground Control
+> IN-SPACe Model Rocketry Competition 2026 · targeting 1000 m AGL
 
-Real-time ground control station for the **IN-SPACe Model Rocketry Competition 2026**, built for GITAM University's CAN-7USAT team targeting 1000 m AGL.
+Decodes 46-byte binary telemetry from a Teensy 4.1 over 900 MHz XBee, runs Kalman filter sensor fusion, drives a 6-state flight state machine, streams live to a React dashboard over WebSocket.
 
-The backend decodes 46-byte binary telemetry packets from a Teensy 4.1 flight computer transmitted over a 900 MHz XBee radio link, runs Kalman filter sensor fusion, maintains a 6-state flight state machine, and broadcasts live data to a React dashboard over WebSocket.
+| Metric | Target | Achieved |
+|--------|--------|----------|
+| End-to-end latency | 15 ms | < 5 ms |
+| Packet decode | 2 ms | 0.5 ms |
+| WebSocket broadcast | 5 ms | 1 ms |
+| Packet loss | — | 0% across 23 tests |
 
-**Numbers that matter:**
-- End-to-end latency: **< 5 ms** (target was 15 ms)
-- Packet decode time: **0.5 ms** (target was 2 ms)
-- WebSocket broadcast: **1 ms** (target was 5 ms)
-- Packet loss: **0%** across all 23/23 passing tests
-
-**Packet structure:** 46 bytes — sync byte, timestamp, flight state, altitude, velocity, quaternion (W/X/Y/Z), GPS lat/long, XOR checksum  
-**State machine:** `PRE-FLIGHT → BOOST → COAST → APOGEE → DESCENT → LANDED`  
-**Stack detail:** FastAPI + Uvicorn + asyncpg + NumPy/SciPy (Kalman) · React 18 + TypeScript + Zustand + uPlot (real-time charts) + Three.js
-
-> The challenge wasn't writing the code — it was writing code that works once, correctly, on launch day, with a rocket already on the pad.
-
-[→ Repository](https://github.com/chandu1234678/CAN-7USAT-Ground-Control-Backend)
+`Python` `FastAPI` `WebSocket` `Kalman Filter` `React` `TypeScript` → [Repository](https://github.com/chandu1234678/CAN-7USAT-Ground-Control-Backend)
 
 ---
 
-### AUVBrain — Autonomous Underwater Vehicle Control System
-`Python · FastAPI · ROS2 · Docker · asyncio` — **2026**
+### AUVBrain — Autonomous Underwater Vehicle Control
+> No internet. No margin for error. p95 agent loop: 0.84 ms
 
-Full autonomous control stack for an underwater vehicle. No internet, no margin for error. Every component had to work offline and degrade gracefully.
+Deterministic observe → decide → act loop with 4-DOF thruster control. Offline LLM (llama.cpp) with rules-based fallback. What does the vehicle do when the LLM times out at 20 m depth? That question drove the architecture.
 
-The system runs a deterministic `observe → decide → act` agent loop with 4-DOF thruster control and a safety monitor that enforces hard limits on depth, battery, temperature, and obstacle proximity before any decision executes.
-
-- Offline LLM decision engine (llama.cpp / OpenAI-compatible API) with rules-based fallback when the model is unavailable or slow
-- Agent loop p95 latency: **≈ 0.84 ms**
-- Append-only JSONL telemetry logging for full mission replay and post-mission analysis
-- Structured telemetry covers every state transition, decision, and sensor reading
-
-> Designing the fallback logic was harder than building the main path. What does the vehicle do when the LLM times out at 20 m depth? That question drove the architecture.
-
-[→ Repository](https://github.com/chandu1234678/AUVBrain)
+`Python` `FastAPI` `ROS2` `Docker` `llama.cpp` → [Repository](https://github.com/chandu1234678/AUVBrain)
 
 ---
 
-### MedVision AI — Explainable AI System for Diabetic Ulcer Detection
-`PyTorch · FastAPI · Grad-CAM · SHAP · Docker · MLflow · DVC · Prometheus · Grafana` — **2025–2026**
+### MedVision AI — Clinical Explainable AI · [Live](https://diabetic-ulcer-ai-system.vercel.app)
+> AI Day Hackathon — GITAM x Kodryx AI, March 2026
 
-Started at the **AI Day Hackathon (GITAM × Kodryx AI, March 2026)**. Extended into a production-deployed clinical decision-support platform.
+Diabetic ulcer detection with Grad-CAM heatmaps and SHAP values. Black-box predictions are a liability in clinical settings — the explainability layer isn't a feature, it's the point.
 
-The system combines medical image analysis and structured clinical data (age, BMI, diabetes duration) to estimate ulcer risk — and critically, it shows *why* it made that call.
-
-- Custom CNN in PyTorch for image classification
-- Grad-CAM heatmaps highlight which image regions the model attends to
-- SHAP values quantify how each clinical feature influenced the prediction
-- Patient timeline tracking for ulcer progression monitoring
-- Full MLOps stack: MLflow experiment tracking, DVC dataset versioning, Prometheus metrics, Grafana dashboards
-- 5 production health-check endpoints (`/health`, `/health/ping`, `/health/ready`, `/health/live`, `/health/status`)
-- JWT auth, RBAC, Cloudinary image storage, Docker Compose
-- **Live:** [diabetic-ulcer-ai-system.vercel.app](https://diabetic-ulcer-ai-system.vercel.app)
-
-> Black-box predictions are a liability in clinical settings. The explainability layer isn't a nice-to-have — it's the entire point. A clinician needs to understand, challenge, and override the system.
-
-[→ Repository](https://github.com/chandu1234678/diabetic-ulcer-ai-system)
+`PyTorch` `Grad-CAM` `SHAP` `FastAPI` `MLflow` `Docker` `Prometheus` → [Repository](https://github.com/chandu1234678/diabetic-ulcer-ai-system)
 
 ---
 
-### Fake News Analyzer
-`FastAPI · Chrome Extension · TF-IDF · Logistic Regression · LLM reasoning` — **2025–2026**
+### Fake News Analyzer · 90% accuracy
+> HackXplore — IEEE-SSIT, VJIT, April 2026
 
-Started at **HackXplore (IEEE-SSIT Student Chapter, VJIT, April 2026)**. A browser extension that scores news content for credibility as you browse — one click, instant result.
+Chrome extension → FastAPI → TF-IDF + Logistic Regression on 10k+ samples + LLM reasoning layer. Sub-second pipeline.
 
-- Logistic Regression on 10,000+ labeled samples, **90% validation accuracy** with TF-IDF vectorization
-- Model loaded into memory at startup for sub-second response
-- LLM reasoning layer generates contextual verdict explanations beyond the raw confidence score
-- Chrome extension extracts DOM content and transmits it to the FastAPI backend via CORS-configured endpoints
-
-> The interesting design problem wasn't the model — it was latency. The pipeline had to feel instant. That forced early decisions about model loading, memory layout, and what work happens at startup vs. at request time.
-
-[→ Extension](https://github.com/chandu1234678/fake-news-analyzer) &nbsp;·&nbsp; [→ Backend](https://github.com/chandu1234678/fake-news-backend)
+`FastAPI` `Chrome Extension` `TF-IDF` `Scikit-Learn` → [Extension](https://github.com/chandu1234678/fake-news-analyzer) · [Backend](https://github.com/chandu1234678/fake-news-backend)
 
 ---
 
 ### Hospital Management Platform
-`FastAPI · PostgreSQL · SQLAlchemy · React · JWT · RBAC` — **2025**
+Full-stack. RBAC enforced at query level. ACID transactions. Schema designed before a single route was written.
 
-Full-stack platform for real hospital workflows. The goal was to model the domain correctly, not just build CRUD endpoints.
-
-- Relational PostgreSQL schema with ORM mapping — patient records, appointments, inventory, all designed around how the data actually relates
-- Strict RBAC: Admin, Doctor, and Receptionist roles hitting entirely separate data partitions — enforced at the query level, not just in route handlers
-- ACID-compliant transaction blocks for anything that touches multiple tables
-- Decoupled React frontend and FastAPI backend, clean REST boundaries throughout
-
-> The hard part was the domain model. If the schema is wrong, no amount of application logic fixes it. I spent more time on the database design than on the API.
-
-[→ Repository](https://github.com/chandu1234678/hospital-management-platform)
+`FastAPI` `PostgreSQL` `React` `JWT` → [Repository](https://github.com/chandu1234678/hospital-management-platform)
 
 ---
 
-### Vijetha Digital — E-Commerce Backend
-`FastAPI · PostgreSQL · JWT · Razorpay` — **2024–Present** · *Production, live*
+### Vijetha Digital · Production. Live. Real orders.
+Backend for a real printing business. 6-state order lifecycle. Razorpay integration.
 
-Backend for a real printing business. Not a demo. In use.
+`FastAPI` `PostgreSQL` `Razorpay` → [Repository](https://github.com/chandu1234678/vijetha-digital-backend)
 
-- 15+ REST endpoints, JWT auth, bcrypt hashing, multi-role access (User / Admin / Business)
-- Razorpay payment integration
-- 6-state order lifecycle (`pending → confirmed → in-production → ready → dispatched → delivered`) across 10 relational tables with ACID transactions
+---
 
-[→ Repository](https://github.com/chandu1234678/vijetha-digital-backend)
+## GitHub Stats
+
+<div align="center">
+  <img height="160" src="https://github-readme-stats.vercel.app/api?username=chandu1234678&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" />
+  <img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=chandu1234678&layout=compact&theme=tokyonight&hide_border=true" />
+</div>
+
+<div align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=chandu1234678&theme=tokyonight&hide_border=true" />
+</div>
 
 ---
 
 ## Experience
 
-**AI Intern — SmartED Innovations** &nbsp;·&nbsp; Feb 2026 – Present  
-Designing ML workflows in Python/Scikit-Learn, building FastAPI integrations for model inference pipelines
-
-**AI/ML Intern — Elevate Labs** &nbsp;·&nbsp; Apr 2026 – May 2026  
-Applied ML: preprocessing, training, evaluation, deployment-oriented backend integrations
-
----
-
-## What I'm focused on right now
-
-MLOps in practice — model serving, versioning, monitoring, drift detection. Advanced backend patterns — connection pooling, async task queues, caching. Distributed systems basics. Deeper XAI for domains where the explanation matters as much as the prediction.
+| Company | Role | Period |
+|---------|------|--------|
+| BHEL (PSU) | Software Intern | Ongoing |
+| SmartED Innovations | AI Intern | Feb 2026 – Present |
+| Elevate Labs | AI/ML Intern | Apr – May 2026 |
 
 ---
 
-*I learn fastest when something real is at stake. Most of what I know came from a deadline, a broken system, or a constraint that ruled out the obvious solution.*
+<div align="center">
+
+*I learn fastest when something real is at stake.*  
+*Most of what I know came from a deadline, a broken system, or a constraint that ruled out the obvious solution.*
+
+</div>
