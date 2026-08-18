@@ -28,7 +28,7 @@ Python · FastAPI · PyTorch · PostgreSQL · React · ROS2 · Docker
 ## In production
 
 **Vijetha Digital** — backend for a live e-commerce/printing business. Razorpay integration, 6-state order lifecycle, 15+ endpoints.
-[→ Live](https://vijethadigital.com) &nbsp;·&nbsp; [→ Repository](https://github.com/BharatChandra-sys/vijetha-digital-backend)
+[→Static Live](https://vijethadigital.com) &nbsp;·&nbsp; [→ Full Live under development ](https://vijetha-digital-store.vercel.app/) &nbsp;·&nbsp; [→ Repository](https://github.com/BharatChandra-sys/vijetha-digital-backend)
 
 **Hospital Management Platform** — three-portal system (admin, doctors, reception) live at Deepthi Hospitals. RBAC enforced at the query level, ACID-compliant transactions.
 [→ Live](https://deepthihospitals.vercel.app) &nbsp;·&nbsp; [→ Repository](https://github.com/BharatChandra-sys/hospital-management-platform)
