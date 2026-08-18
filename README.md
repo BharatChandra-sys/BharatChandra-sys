@@ -26,3 +26,7 @@ Python · FastAPI · PyTorch · PostgreSQL · React · ROS2 · Docker
 ---
 
 Currently focused on MLOps in practice — model serving, versioning, drift detection.
+
+---
+
+More projects (crypto trading systems, rocket trajectory simulation, fact-checking pipelines, and others) → [full repo list](https://github.com/BharatChandra-sys?tab=repositories)
