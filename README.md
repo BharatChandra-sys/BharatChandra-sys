@@ -20,6 +20,9 @@ Python · FastAPI · PyTorch · PostgreSQL · React · ROS2 · Docker
 **CAN-7USAT Ground Control Station** — real-time telemetry backend for the IN-SPACe Model Rocketry Competition 2026. Decodes 46-byte binary packets over 900MHz XBee at <5ms end-to-end latency, Kalman filter sensor fusion, 23/23 tests passing.
 [→ Repository](https://github.com/BharatChandra-sys/CAN-7USAT-Ground-Control-Backend)
 
+**FactCheckAI** — fact-checking pipeline that combines text classification with external evidence retrieval to evaluate news claims and return a confidence-scored result.
+[→ Repository](https://github.com/BharatChandra-sys/FactCheckAI)
+
 **MedVision AI** — explainable ulcer-risk detection combining a CNN with Grad-CAM and SHAP, so the prediction comes with a reason a clinician can actually check.
 [→ Live](https://diabetic-ulcer-ai-system.vercel.app) &nbsp;·&nbsp; [→ Repository](https://github.com/BharatChandra-sys/diabetic-ulcer-ai-system)
 
@@ -38,7 +41,7 @@ Python · FastAPI · PyTorch · PostgreSQL · React · ROS2 · Docker
 
 ---
 
-Currently focused on MLOps in practice — model serving, versioning, drift detection.
+Currently exploring MLOps in practice — model serving, versioning, monitoring, and drift detection.
 
 ---
 
