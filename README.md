@@ -6,7 +6,7 @@ CSE student at GITAM University · CS Lead at GARI. I build systems that work un
 
 ---
 
-## Stack
+## Tools I work with
 
 Python · FastAPI · PyTorch · PostgreSQL · React · ROS2 · Docker
 
